@@ -97,6 +97,12 @@ ol {
   outline: 1px solid #FFF;
 }
 
+.search-form__label:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
 .search-form__textfield:active{
   border: 1px solid #FFF;
   border-radius: 0;
@@ -121,12 +127,15 @@ ol {
   background-color: #000;
 }
 
-:checked + span {
-  background-image: url(./images/check.svg);
+.search-form__checkbox:checked + span{
+  border: none;
+  background-image: url(/images/check.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 }
+
+
 
 .button{
   border: 1px solid #FFF;
@@ -142,6 +151,8 @@ ol {
 
 .button:hover{
   cursor: pointer;
+  text-decoration: underline;
+  text-underline-position: under;
 }
 
 .button:active{
@@ -163,9 +174,12 @@ ol {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 30px;
   height: 298px;
-  overflow: scroll;
+  overflow: auto;
+}
+
+.content__list-item:not(:last-child){
+  margin-bottom: 30px;
 }
 
 .content__details{
@@ -208,8 +222,6 @@ ol {
   margin-bottom: 16px;
 }
 
-
-
 .content__video-card-description{
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
@@ -229,13 +241,21 @@ ol {
   justify-content: space-between;
 }
 
+.content__video-card:active{
+  background-color: #545050;
+}
+
+.content__video-card:hover{
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
 .content__video-card-thumbnail{
   width: 194px;
   height: 103px;
 }
 
 .more-button{
-  display: flex;
-  padding: 6px 143px;
-  align-self:flex-end;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  padding: 6px 142.5px;
 }
