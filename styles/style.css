@@ -203,17 +203,21 @@ ol {
   padding-bottom: 26px;
 }
 
-.content__card-link{
-  color: #FFF;
-  text-decoration: none;
-}
-
 .content__card-link:focus{
-  outline: none;
+  overflow: none;
 }
 
 .content__card-link:focus-visible{
-  border: 1px solid #FFF;
+  outline-offset: 2px;
+  outline: 1px solid #FFF;
+}
+
+
+.content__card-link{
+  margin: 2px;
+  display: block;
+  color: #FFF;
+  text-decoration: none;
 }
 
 .content__video-card-title{
@@ -232,15 +236,14 @@ ol {
   width: 711px;
   height: 386px;
   position: relative;
-  overflow: hidden;
   margin-bottom: 16px;
 }
 
-.result__video-container:focus{
+.result__video:focus{
   outline: none;
 }
 
-.result__video-container:focus-visible{
+.result__video:focus-visible{
   outline: 1px solid #FFF;
 }
 
@@ -281,5 +284,9 @@ ol {
 
 .more-button{
   font-family: 'Fira Sans Condensed', sans-serif;
-  padding: 6px 142px;
+  width: 399px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
