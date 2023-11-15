@@ -86,10 +86,14 @@ ol {
   width: 225px;
   height: 27px;
   background-color: #1b1919;
-  color: rgba(255, 255, 255, 0.70);
+  color: rgba(255, 255, 255);
   font-family: inherit; 
   font-size: 18px;
   font-weight: 400;
+}
+
+.search-form__textfield::placeholder{
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .search-form__label:has(:focus-visible){
@@ -135,8 +139,6 @@ ol {
   background-size: contain;
 }
 
-
-
 .button{
   border: 1px solid #FFF;
   background-color: #1b1919;
@@ -157,6 +159,10 @@ ol {
 
 .button:active{
   background-color: #545050;
+}
+
+.button:focus{
+  outline: none;
 }
 
 .button:focus-visible{
@@ -185,8 +191,6 @@ ol {
 .content__details{
   width: 100%;
   height: 100%;
-}
-.content__details{
   font-family: Oswald, sans-serif;
   color: #FFF;
 }
@@ -204,10 +208,20 @@ ol {
   text-decoration: none;
 }
 
+.content__card-link:focus{
+  outline: none;
+}
+
+.content__card-link:focus-visible{
+  outline-offset: 2px;
+  outline: 1px solid #FFF;
+}
+
 .content__video-card-title{
   margin-bottom: 6px;
   font-size: 30px;
   font-weight: 700;
+  line-height: 100%;
   text-transform: uppercase;
 }
 
@@ -223,6 +237,14 @@ ol {
   margin-bottom: 16px;
 }
 
+.result__video-container:focus{
+  outline: none;
+}
+
+.result__video-container:focus-visible{
+  outline: 1px solid #FFF;
+}
+
 .content__video-card-description{
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
@@ -234,6 +256,7 @@ ol {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .content__video-card{
@@ -241,8 +264,8 @@ ol {
   justify-content: space-between;
 }
 
-.content__video-card:active{
-  background-color: #545050;
+.content__card-link_current > .content__video-card{
+  background: #545050;
 }
 
 .content__video-card:hover{
@@ -253,9 +276,11 @@ ol {
 .content__video-card-thumbnail{
   width: 194px;
   height: 103px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .more-button{
   font-family: 'Fira Sans Condensed', sans-serif;
-  padding: 6px 142.5px;
+  padding: 6px 142px;
 }
